@@ -1,0 +1,176 @@
+/* Styles spécifiques à la page Timer */
+
+/* Section des catégories */
+#category-section {
+    margin-bottom: var(--section-spacing);
+}
+
+#category-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#category-name {
+    flex-grow: 1;
+}
+
+#category-color {
+    width: 50px;
+    height: 38px;
+    padding: 0;
+    cursor: pointer;
+}
+
+#categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.category-item:hover {
+    background-color: #e9e9e9;
+}
+
+.category-item.selected {
+    background-color: #e3efff;
+    border: 1px solid var(--primary-color);
+}
+
+.category-item span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Section du timer */
+#timer-section {
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+}
+
+#timer-duration {
+    margin-bottom: 20px;
+}
+
+#timer-duration-input {
+    width: 70px;
+    text-align: center;
+}
+
+#timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#timer-buttons button {
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+#start-timer {
+    background-color: var(--success-color);
+}
+
+#start-timer:hover {
+    background-color: #3ad85e;
+}
+
+#distraction-timer {
+    background-color: #f5a142;
+}
+
+#distraction-timer:hover {
+    background-color: #d88c3a;
+}
+
+#reset-timer {
+    background-color: var(--error-color);
+}
+
+#reset-timer:hover {
+    background-color: #d83a3a;
+}
+
+#pause-timer {
+    background-color: #7e42f5;
+}
+
+#pause-timer:hover {
+    background-color: #6d3ad8;
+}
+
+/* États du timer */
+.timer-running #timer-display {
+    color: var(--success-color);
+}
+
+.timer-distracted #timer-display {
+    color: #f5a142;
+}
+
+.timer-paused #timer-display {
+    color: #7e42f5;
+}
+
+/* Section de la tâche */
+#task-section {
+    margin-top: var(--section-spacing);
+}
+
+#task-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#task-category,
+#task-description {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #timer-buttons {
+        flex-wrap: wrap;
+    }
+
+    #timer-buttons button {
+        flex: 1 0 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    #category-form {
+        flex-wrap: wrap;
+    }
+
+    #category-name {
+        flex: 1 0 70%;
+    }
+
+    #timer-display {
+        font-size: 3rem;
+    }
+}

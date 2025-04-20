@@ -1,0 +1,177 @@
+/* Styles spécifiques à la page de visualisation */
+
+/* Section du sélecteur de date */
+#date-selector {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#date-input {
+    padding: 8px 12px;
+    width: 200px;
+}
+
+/* Conteneur du graphique */
+#chart-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 500px;
+}
+
+/* Éléments SVG du graphique */
+.chart-svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.hour-label {
+    font-size: 12px;
+    text-anchor: middle;
+    fill: var(--text-color);
+}
+
+.chart-circle {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 1;
+}
+
+.chart-segment {
+    stroke-width: 0;
+    transition: opacity 0.3s;
+}
+
+.chart-segment:hover {
+    opacity: 0.8;
+}
+
+.segment-label {
+    font-size: 12px;
+    text-anchor: middle;
+    fill: white;
+    pointer-events: none;
+}
+
+/* Motifs de distraction */
+.distraction-pattern {
+    stroke: rgba(0, 0, 0, 0.5);
+    stroke-width: 1;
+}
+
+/* Légende du graphique */
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.legend-distraction {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background-image: repeating-linear-gradient(45deg, black, black 2px, transparent 2px, transparent 4px);
+    opacity: 0.5;
+}
+
+/* Section des statistiques */
+#stats-section {
+    margin-top: var(--section-spacing);
+}
+
+#stats-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.category-stat {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-stat:last-child {
+    border-bottom: none;
+}
+
+.color-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.category-stat span {
+    flex: 1;
+}
+
+.distraction-info {
+    color: #888;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* En-tête des statistiques */
+.stats-header {
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.total-time {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #chart-container {
+        min-height: 400px;
+    }
+
+    .category-stat {
+        flex-wrap: wrap;
+    }
+
+    .distraction-info {
+        width: 100%;
+        text-align: left;
+        margin-top: 5px;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    #chart-container {
+        min-height: 300px;
+    }
+
+    .chart-legend {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
