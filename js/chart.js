@@ -1,4 +1,4 @@
- /**
+/**
  * Gestion du graphique circulaire
  * Ce module gère la création et l'affichage du graphique circulaire 24h
  */

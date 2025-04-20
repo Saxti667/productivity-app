@@ -1,4 +1,4 @@
- /**
+/**
  * Gestion du timer Pomodoro
  * Ce module gère toute la logique du timer et des sessions de travail
  */
